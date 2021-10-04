@@ -28,9 +28,8 @@ public class NovaEmpresaServlet extends HttpServlet {
 		String paramDataEmpresa = request.getParameter("data");
 		Date dataAbertura = null;
 		
-		
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         try {
-        	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			dataAbertura = sdf.parse(paramDataEmpresa);
 		} catch (ParseException e) {
 			throw new ServletException(e);
@@ -46,9 +45,11 @@ public class NovaEmpresaServlet extends HttpServlet {
 		Banco banco = new Banco();
 		banco.adiciona(empresa);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/empresaCadastradaMensagem.jsp"); //caminho para a requisição
-		request.setAttribute("empresa", empresa.getNome());
-		rd.forward(request, response);
+		response.sendRedirect("listaEmpresas");
+		
+//		RequestDispatcher rd = request.getRequestDispatcher("/empresaCadastradaMensagem.jsp"); //caminho para a requisição
+//		request.setAttribute("empresa", empresa.getNome());
+//		rd.forward(request, response);
 		
 	}
 

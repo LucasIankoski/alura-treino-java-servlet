@@ -8,6 +8,11 @@ public class Empresa {
 	private String nome;
 	private Date dataAbertura;
 	
+	public Empresa() {
+			
+
+	}
+	
 	public void setId(Integer id) {
 		this.id = id;
 	}
