@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:url value="/listaEmpresas" var="linkListaEmpresas" />
+<c:url value="/formCadastroEmpresa.jsp" var="linkCadastroEmpresas" />
 
 
 <!DOCTYPE html>
@@ -21,6 +22,9 @@
 	
 	<form action="${linkListaEmpresas}">
 		<input type="submit" value="Visualizar lista">
+	</form>
+	<form action="${linkCadastroEmpresas}">
+		<input type="submit" value="Cadastrar nova empresa">
 	</form>
 
 </body>
