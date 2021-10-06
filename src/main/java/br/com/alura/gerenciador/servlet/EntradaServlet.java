@@ -32,7 +32,18 @@ public class EntradaServlet extends HttpServlet {
 		
 		String paramAcao = request.getParameter("acao");
 		
-				
+		HttpSession sessao = request.getSession();
+		boolean usuarioDeslogado = (sessao.getAttribute("usuarioLogado") == null);
+		boolean acoesNaoRestritas = !(paramAcao.equals("Login") || paramAcao.equals("LoginForm"));
+		
+		if(usuarioDeslogado && acoesNaoRestritas) {
+			
+			response.sendRedirect("paginaInicial?acao=LoginForm");
+			return;
+		}
+
+		
+		
 		String nomeDaClasse = "br.com.alura.gerenciador.acao." + paramAcao;
 		
 		String nome;
