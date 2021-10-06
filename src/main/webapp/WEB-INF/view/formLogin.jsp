@@ -6,13 +6,14 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body>	
+
 	<form action="${linkPaginaInicial}" method="post">
 		Login: <input type="text" name="login" /> <br/>
-		Senha <input type="password" name="senha" />
+		Senha: <input type="password" name="senha" />
 		<input type="hidden" name="acao" value="Login" />
 		
-		<input type="submit" /> 
+		<input type="submit" value="Acessar" /> 
 	</form>
 
 </body>

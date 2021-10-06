@@ -14,6 +14,16 @@
 <title>Cadastro da empresa</title>
 </head>
 <body>
+
+	Bem-vindo, ${usuarioLogado.login }
+	<br />
+	<br />
+	
+	<!--<c:if test="${empty empresa}"> 
+		Nenhuma empresa cadastrada <br />
+	</c:if>
+	<c:if test="${not empty empresas}"> -->
+	
 	Listas: <br />
 	
 	<ul>
@@ -27,6 +37,8 @@
 		
 		</c:forEach>	
 	</ul>
+	<!--</c:if>-->
+	
 	<form action="${linkCadastroEmpresas}">
 		<input type="hidden" name="acao" value="NovaEmpresaForm">
 		<input type="submit" value="Cadastrar nova empresa">
