@@ -11,6 +11,8 @@
 <title>Alterando empresa</title>
 </head>
 <body>
+	<c:import url="logout-link.jsp"></c:import>
+	
 	<form action="${linkPaginaInicial}" method="post">
 		Nome da empresa:<input type="text" name="nome" value="${empresa.nome }" /> 
 		Data de abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>" />

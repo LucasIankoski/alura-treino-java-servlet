@@ -15,7 +15,9 @@
 </head>
 <body>
 
-	Bem-vindo, ${usuarioLogado.login }
+	<c:import url="logout-link.jsp"></c:import>
+
+	USUARIO: ${usuarioLogado.login }
 	<br />
 	<br />
 	

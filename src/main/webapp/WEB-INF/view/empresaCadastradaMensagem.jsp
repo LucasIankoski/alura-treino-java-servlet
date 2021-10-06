@@ -12,6 +12,7 @@
 <title>Cadastro da empresa</title>
 </head>
 <body>
+	<c:import url="logout-link.jsp"></c:import>
 
 	<c:if test="${not empty empresa}">
 		Empresa ${nomeEmpresa} cadastrada com sucesso!
