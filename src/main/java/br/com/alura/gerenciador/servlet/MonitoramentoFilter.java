@@ -12,13 +12,13 @@ import javax.servlet.annotation.WebFilter;
 /**
  * Servlet Filter implementation class MonitoramentoFilter
  */
-@WebFilter("/paginaInicial")
-public class MonitoramentoFilter implements Filter {
-
-    
+//@WebFilter("/paginaInicial")
+public class MonitoramentoFilter implements Filter { 
     	
 		
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		
+		System.out.println("MonitoramentoFilter");
 		
 		long antes = System.currentTimeMillis();
 		
