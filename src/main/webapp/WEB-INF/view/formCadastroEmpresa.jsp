@@ -12,7 +12,7 @@
 		Nome da empresa:<input type="text" name="nome" /> Data de abertura: <input type="text" name="data" />
 		<input type="hidden" name="acao" value="NovaEmpresa" />
 		
-		<input type="submit" /> 
+		<input type="submit" value="Cadastrar" /> 
 	</form>
 
 </body>
