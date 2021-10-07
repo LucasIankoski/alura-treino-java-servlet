@@ -13,21 +13,20 @@ import javax.servlet.annotation.WebFilter;
  * Servlet Filter implementation class MonitoramentoFilter
  */
 //@WebFilter("/paginaInicial")
-public class MonitoramentoFilter implements Filter { 
-    	
-		
-	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		
+public class MonitoramentoFilter implements Filter {
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
+			throws IOException, ServletException {
+
 		System.out.println("MonitoramentoFilter");
-		
+
 		long antes = System.currentTimeMillis();
-		
+
 		String acao = request.getParameter("acao");
 		chain.doFilter(request, response);
-		
+
 		long depois = System.currentTimeMillis();
 		System.out.println("Ação: " + acao + " " + (depois - antes) + "ms");
 	}
 
-		
 }

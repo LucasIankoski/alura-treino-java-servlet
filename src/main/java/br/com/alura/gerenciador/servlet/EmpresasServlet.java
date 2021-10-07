@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.google.gson.Gson;
+import com.thoughtworks.xstream.XStream;
 
 import br.com.alura.gerenciador.modelo.Banco;
 import br.com.alura.gerenciador.modelo.Empresa;
@@ -21,19 +22,35 @@ import br.com.alura.gerenciador.modelo.Empresa;
 public class EmpresasServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Banco banco = new Banco();		
+	protected void service(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		Banco banco = new Banco();
 		List<Empresa> empresas = banco.getEmpresas();
-		
-		//criando referência para o objeto Gson que irá transformar a lista de empresas em informação json
-		Gson gson = new Gson();
-		String json = gson.toJson(empresas);
-		
-		response.setContentType("application/json");
-		response.getWriter().print(json);
-		
+
+		String RequisicaoDeArquivo = request.getHeader("Accept");
+
+		if (RequisicaoDeArquivo.contains("xml")) {
+
+			// criando referência para o objeto XStream que irá transformar a lista de
+			// empresas em informação xml
+			XStream xtream = new XStream();
+			String xml = xtream.toXML(empresas);
+
+			response.setContentType("application/xml");
+			response.getWriter().print(xml);
+		} else if (RequisicaoDeArquivo.contains("json")) {
+
+			// criando referência para o objeto Gson que irá transformar a lista de empresas
+			// em informação json
+			Gson gson = new Gson();
+			String json = gson.toJson(empresas);
+
+			response.setContentType("application/json");
+			response.getWriter().print(json);
+
+		}
+
 	}
 
 }
