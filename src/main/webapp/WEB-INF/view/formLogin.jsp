@@ -6,31 +6,29 @@
 <style type="text/css">
   <%@include file="../css/estilo.scss" %>
 </style>
-<script>
-<%@include file="../js/animacao.js" %>
-</script>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Login</title>
 </head>
 <body>			
-    
+
+	    
     <div class="wrapper">
 	  <form class="login" action="${linkPaginaInicial}" method="post">
-	    <p class="title">Log in</p>
-	    <input type="text" placeholder="Username" name="login" autofocus/>
+	    <p class="title">Login</p>
+	    <input type="text" placeholder="Usuário" name="login" autofocus/>
 	    <i class="fa fa-user"></i>
-	    <input type="password" placeholder="Password" name="senha" />
+	    <input type="password" placeholder="Senha" name="senha" />
 	    <input type="hidden" name="acao" value="Login" />
 	    <i class="fa fa-key"></i>
-	    <a href="#">Forgot your password?</a>
+	    <a href="#">Esqueci minha senha</a>
 	    <button>
 	      <i class="spinner"></i>
-	      <span class="state">Log in</span>
+	      <span class="state">Acessar</span>
 	    </button>
-	  </form>
-	  <footer><a target="blank" href="http://boudra.me/">boudra.me</a></footer>
-	  </p>
+	  </form>	  
 	</div>
+	
+	
 
 </body>
 </html>
