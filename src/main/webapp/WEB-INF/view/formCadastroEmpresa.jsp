@@ -9,7 +9,8 @@
 <body>
 	<c:import url="logout-link.jsp"></c:import>
 	<form action="${linkListaEmpresas}" method="post">
-		Nome da empresa:<input type="text" name="nome" /> Data de abertura: <input type="text" name="data" />
+		Nome da empresa:<input type="text" name="nome" /> 
+		Data de abertura: <input type="text" name="data" />
 		<input type="hidden" name="acao" value="NovaEmpresa" />
 		
 		<input type="submit" value="Cadastrar" /> 

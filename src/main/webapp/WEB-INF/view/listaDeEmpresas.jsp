@@ -29,21 +29,32 @@
 	Listas:
 	<br />
 
-	<ul>
-		<c:forEach items="${empresas}" var="empresa">
-			<li>${empresa.nome}- <fmt:formatDate
-					value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" /> <a
-				href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
-				<a
-				href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
-
-
-			</li>
-
-		</c:forEach>
-	</ul>
+	<table>
+		<ul>			
+			<tr>
+				<th>Empresa</th>
+				<th>Data de criação</th>
+			</tr>
+			<c:forEach items="${empresas}" var="empresa">
+				<tr>
+					
+						<td>					
+							<li>${empresa.nome}</li>						
+						</td>
+						
+						<td>
+							<li>	<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" /> </li>
+						</td>
+						
+					
+				</tr>
+			</c:forEach>		
+		</ul>		
 	<!--</c:if>-->
-
+	</table>
+	
+	<br />
+	
 	<form action="${linkCadastroEmpresas}">
 		<input type="hidden" name="acao" value="NovaEmpresaForm"> <input
 			type="submit" value="Cadastrar nova empresa">
