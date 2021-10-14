@@ -7,13 +7,34 @@
 <title>Cadastro</title>
 </head>
 <body>
-	<c:import url="logout-link.jsp"></c:import>
+	<c:import url="logout-link.jsp"></c:import> <!-- importa jsp com o link de deslogar -->
+	
 	<form action="${linkListaEmpresas}" method="post">
-		Nome da empresa:<input type="text" name="nome" /> 
-		Data de abertura: <input type="text" name="data" />
-		<input type="hidden" name="acao" value="NovaEmpresa" />
-		
-		<input type="submit" value="Cadastrar" /> 
+		<table>
+			 <tr>
+			 	 <td>		
+					 Nome da empresa:
+				 </td>
+				 <td>
+					 <input type="text" name="nome" />
+				 </td>
+			 </tr>     
+			
+			 <tr>
+			 	 <td>
+				 	Data de abertura:
+				 </td>
+				 <td> 			
+				 	<input type="text" name="data" />
+				 </td>
+			 </tr>   
+			
+			<input type="hidden" name="acao" value="NovaEmpresa" />
+			
+			 <td>
+				<input type="submit" value="Cadastrar" />
+			</td>	 
+		</table>
 	</form>
 
 </body>

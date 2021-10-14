@@ -43,7 +43,13 @@
 						</td>
 						
 						<td>
-							<li>	<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" /> </li>
+							<li><fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" /></li>
+						</td>
+						<td>
+							<a href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
+						</td>
+						<td>
+							<a href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
 						</td>
 						
 					
