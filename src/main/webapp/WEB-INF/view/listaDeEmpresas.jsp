@@ -33,25 +33,38 @@
 		<ul>			
 			<tr>
 				<th>Empresa</th>
+				<th>CNPJ</th>
+				<th>Capital social</th>
+				<th>Contato</th>
 				<th>Data de criação</th>
 			</tr>
 			<c:forEach items="${empresas}" var="empresa">
 				<tr>
+				
+					<td>					
+						${empresa.nome}						
+					</td>
 					
-						<td>					
-							<li>${empresa.nome}</li>						
-						</td>
+					<td>					
+						${empresa.cnpj}					
+					</td>
+					
+					<td>					
+						R$ ${empresa.capital}					
+					</td>
+					<td>					
+						${empresa.email}						
+					</td>
 						
-						<td>
-							<li><fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" /></li>
-						</td>
-						<td>
-							<a href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
-						</td>
-						<td>
-							<a href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
-						</td>
-						
+					<td>
+						<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
+					</td>
+					<td>
+						<a href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
+					</td>
+					<td>
+						<a href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
+					</td>						
 					
 				</tr>
 			</c:forEach>		

@@ -18,7 +18,25 @@
 				 <td>
 					 <input type="text" name="nome" />
 				 </td>
-			 </tr>     
+			 </tr>    
+			 
+			 <tr>
+			 	 <td>		
+					 CNPJ:
+				 </td>
+				 <td>
+					 <input type="text" name="cnpj" />
+				 </td>
+			 </tr>  
+			 
+			 <tr>
+			 	 <td>		
+					 Capital social
+				 </td>
+				 <td>
+					 <input type="text" name="capital" />
+				 </td>
+			 </tr>
 			
 			 <tr>
 			 	 <td>
@@ -26,6 +44,15 @@
 				 </td>
 				 <td> 			
 				 	<input type="text" name="data" />
+				 </td>
+			 </tr>   
+			 
+			 <tr>
+			 	 <td>
+				 	E-mail:
+				 </td>
+				 <td> 			
+				 	<input type="text" name="email" />
 				 </td>
 			 </tr>   
 			
