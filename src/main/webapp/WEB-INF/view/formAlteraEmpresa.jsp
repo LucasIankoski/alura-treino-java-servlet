@@ -14,11 +14,57 @@
 	<c:import url="logout-link.jsp"></c:import>
 	
 	<form action="${linkPaginaInicial}" method="post">
-		Nome da empresa:<input type="text" name="nome" value="${empresa.nome }" /> 
-		Data de abertura: <input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>" />
-		<input type="hidden" name="id" value="${empresa.id }">
-		<input type="hidden" name="acao" value="AlteraEmpresas" />
-		<input type="submit" value="Salvar"/> 
+		<table>
+			 <tr>
+			 	 <td>		
+					 Nome da empresa:
+				 </td>
+				 <td>
+					 <input type="text" name="nome" value="${empresa.nome}" />
+				 </td>
+			 </tr>    
+			 
+			 <tr>
+			 	 <td>		
+					 CNPJ:
+				 </td>
+				 <td>
+					 <input type="text" name="cnpj" value="${empresa.cnpj}" />
+				 </td>
+			 </tr>  
+			 
+			 <tr>
+			 	 <td>		
+					 Capital social
+				 </td>
+				 <td>
+					 <input type="text" name="capital" value="${empresa.capital}" />
+				 </td>
+			 </tr>
+			
+			 <tr>
+			 	 <td>
+				 	Data de abertura:
+				 </td>
+				 <td> 			
+				 	<input type="text" name="data" value="<fmt:formatDate value="${empresa.dataAbertura}" pattern="dd/MM/yyyy"/>"  />
+				 </td>
+			 </tr>   
+			 
+			 <tr>
+			 	 <td>
+				 	E-mail:
+				 </td>
+				 <td> 			
+				 	<input type="text" name="email" value="${empresa.email}"/>
+				 </td>
+			 </tr>
+			<input type="hidden" name="id" value="${empresa.id }">
+			<input type="hidden" name="acao" value="AlteraEmpresas" />
+			<td>
+				<input type="submit" value="Salvar"/> 
+			</td>	 
+		</table>
 	</form>
 
 </body>

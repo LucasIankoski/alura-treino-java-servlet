@@ -16,16 +16,22 @@ public class AlteraEmpresas implements Acao {
 	
 	public String executa(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		
-		String empresaNome = request.getParameter("nome");
-		String paramDataEmpresa = request.getParameter("data");
+		String empresaNome = request.getParameter("nome");			
+		String empresaCnpj = request.getParameter("cnpj");
+		String paramCapital = request.getParameter("capital");
+		String paramDataEmpresa = request.getParameter("data");	
+		String empresaEmail = request.getParameter("email");
 		String paramId = request.getParameter("id");
+		
 		Integer id = Integer.valueOf(paramId);
+		double EmpresaCapital = 0;
 		Date dataAbertura = null;
 		
 		
         try {
         	SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 			dataAbertura = sdf.parse(paramDataEmpresa);
+			EmpresaCapital =  Double.parseDouble(paramCapital);
 		} catch (ParseException e) {
 			throw new ServletException(e);
 		}
@@ -33,7 +39,11 @@ public class AlteraEmpresas implements Acao {
         Banco banco = new Banco();
         Empresa empresa = banco.buscaPeloIdEmpresa(id);
         empresa.setNome(empresaNome);
+        empresa.setCnpj(empresaCnpj);
+        empresa.setCapital(EmpresaCapital);
         empresa.setDataAbertura(dataAbertura);
+        empresa.setEmail(empresaEmail);
+        
         
         return "redirect:paginaInicial?acao=ListaEmpresas";
 		
