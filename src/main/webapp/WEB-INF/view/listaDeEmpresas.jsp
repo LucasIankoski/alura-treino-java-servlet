@@ -10,8 +10,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style type="text/css">
+  <%@include file="../css/empresas-estilo.css" %>
+</style>
 <meta charset="ISO-8859-1">
-<title>Cadastro da empresa</title>
+<title>Lista de empresas</title>
 </head>
 <body>
 
@@ -29,54 +32,56 @@
 	Listas:
 	<br />
 
-	<table>
-		<ul>			
-			<tr>
-				<th>Empresa</th>
-				<th>CNPJ</th>
-				<th>Capital social</th>
-				<th>Contato</th>
-				<th>Data de criação</th>
-			</tr>
-			<c:forEach items="${empresas}" var="empresa">
+	<div class="informacoes-empresas">
+		<table id="table-listas">
+			<ul>			
 				<tr>
-				
-					<td>					
-						${empresa.nome}						
-					</td>
-					
-					<td>					
-						${empresa.cnpj}					
-					</td>
-					
-					<td>					
-						R$ ${empresa.capital}					
-					</td>
-					<td>					
-						${empresa.email}						
-					</td>
-						
-					<td>
-						<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
-					</td>
-					<td>
-						<a href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
-					</td>
-					<td>
-						<a href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
-					</td>						
-					
+					<th>Empresa</th>
+					<th>CNPJ</th>
+					<th>Capital social</th>
+					<th>Contato</th>
+					<th>Data de criação</th>
 				</tr>
-			</c:forEach>		
-		</ul>		
-	<!--</c:if>-->
-	</table>
+				<c:forEach items="${empresas}" var="empresa">
+					<tr>
+					
+						<td>					
+							${empresa.nome}						
+						</td>
+						
+						<td>					
+							${empresa.cnpj}					
+						</td>
+						
+						<td>					
+							R$ ${empresa.capital}					
+						</td>
+						<td>					
+							${empresa.email}						
+						</td>
+							
+						<td>
+							<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
+						</td>
+						<td>
+							<a href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
+						</td>
+						<td>
+							<a href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
+						</td>						
+						
+					</tr>
+				</c:forEach>		
+			</ul>		
+		<!--</c:if>-->
+		</table>
+	</div>
 	
 	<br />
 	
 	<form action="${linkCadastroEmpresas}">
-		<input type="hidden" name="acao" value="NovaEmpresaForm"> <input
-			type="submit" value="Cadastrar nova empresa">
+		<input type="hidden" name="acao" value="NovaEmpresaForm"> 
+		<input type="submit" value="Cadastrar nova empresa">
 	</form>
 
 
