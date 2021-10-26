@@ -19,11 +19,8 @@
 <body>
 
 	<c:import url="logout-link.jsp"></c:import>
-
-	USUARIO: ${usuarioLogado.login }
-	<br />
-	<br />
-
+	
+	
 	<!--<c:if test="${empty empresa}"> 
 		Nenhuma empresa cadastrada <br />
 	</c:if>
