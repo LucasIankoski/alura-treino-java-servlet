@@ -8,7 +8,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="paginaInicial?acao=Logout">Sair</a>
+	<div id="cabecalho">		 
+		<p><strong>Bem-vindo, ${usuarioLogado.login}</strong></p>
+		<br/>
+		<p><a href="paginaInicial?acao=Logout">Sair</a></p>
+	</div>
+	
 	<br />
 	<br />
 	<br />
