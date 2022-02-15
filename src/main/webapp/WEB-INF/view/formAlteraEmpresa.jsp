@@ -8,6 +8,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<style>
+	<%@include file="../css/cadastro-empresas.css" %>
+</style>
 <title>Alterando empresa</title>
 </head>
 <body>

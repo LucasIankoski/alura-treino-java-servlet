@@ -58,7 +58,8 @@
 					<div class="popup-wrapper">
 						<div class="popup">
 							<div class="popup-content">
-								<h3>Deseja cancelar o preenchimento?</h3>
+								<h2>Atenção</h2>
+								<p>Deseja cancelar o preenchimento?</p>
 								<div class="botoes-popup">
 									<a class="voltar" href="javascript:fecharPopUp()">Voltar</a> <a class="cancelar" href="paginaInicial?acao=ListaEmpresas">Cancelar</a>
 								</div>

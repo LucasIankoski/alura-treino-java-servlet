@@ -7,6 +7,8 @@
 .popup-wrapper {
 	display: none;
 	background: rgba(0, 0, 0, .5);
+	border: 0;
+	border-radius: 5px;
 	position: fixed;
 	top: 0;
 	left: 0;

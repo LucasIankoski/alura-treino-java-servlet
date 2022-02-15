@@ -11,7 +11,7 @@
 <html>
 <head>
 <style type="text/css">
-  <%@include file="../css/empresas-estilo.css" %>
+  <%@include file="../css/cadastro-empresas.css" %>
 </style>
 <meta charset="ISO-8859-1">
 <title>Lista de empresas</title>
