@@ -5,7 +5,11 @@
 <head>
 <style type="text/css">
   <%@include file="../css/cadastro-empresas.css" %>
+  <%@include file="../css/popup.css" %>
 </style>
+<script>
+<%@include file="../js/scripts.js" %>
+</script>
 <meta charset="ISO-8859-1">
 <title>Cadastro</title>
 </head>
@@ -22,16 +26,16 @@
 			<fieldset class="grupo">		
 				<div class="campo">
 					<label><strong>Nome da empresa</strong></label>	 
-					<input type="text" name="nome" required/>
+					<input type="text" name="nome" />
 				</div>
 				
 				<div class="campo">
 					<label><strong>CNPJ</strong></label>				 
-					<input type="text" name="cnpj" required />
+					<input type="text" name="cnpj" />
 				</div>	
 				<div class="campo">
 					<label><strong>Email</strong></label>				 	
-					<input type="text" name="email" required/>
+					<input type="text" name="email" />
 				</div>					
 			</fieldset>
 			
@@ -39,18 +43,28 @@
 			<fieldset class="grupo">
 				<div class="campo">
 					<label><strong>Capital social</strong></label>				 
-					<input type="text" name="capital" required />
+					<input type="text" name="capital"/>
 				</div>
 				<div class="campo">
 					<label><strong>Data de abertura</strong></label>						
-					<input type="text" name="data" required/>
+					<input type="text" name="data"/>
 				</div>			
 			</fieldset>
 		</div>
 				<div id="box-botoes">
 					<input type="hidden" name="acao" value="NovaEmpresa" />	
-					<input class="botao" type="submit" value="Cadastrar" />	
-					<input class="botao" type="submit" value="Cancelar" />	
+					<input class="botao" type="submit" value="Cadastrar" />						
+					<button class="botao" type="reset" onclick="javascript:abrePopUp()">Cancelar</button>
+					<div class="popup-wrapper">
+						<div class="popup">
+							<div class="popup-content">
+								<h3>Deseja cancelar o preenchimento?</h3>
+								<div class="botoes-popup">
+									<a class="voltar" href="javascript:fecharPopUp()">Voltar</a> <a class="cancelar" href="paginaInicial?acao=ListaEmpresas">Cancelar</a>
+								</div>
+							</div>
+						</div>
+					</div>		
 						 	
 				</div>	 	
 	</form>
