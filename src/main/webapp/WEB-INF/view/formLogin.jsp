@@ -4,7 +4,7 @@
 <html>
 <head>
 <style type="text/css">
-  <%@include file="../css/estilo.scss" %>
+  <%@include file="../css/formLogin.css" %>
 </style>
 <meta charset="ISO-8859-1">
 <title>Login</title>
@@ -12,19 +12,24 @@
 <body>			
 
 	    
-    <div class="wrapper">
+    <div class="login-box">
 	  <form class="login" action="${linkPaginaInicial}" method="post">
 	    <p class="title">Login</p>
-	    <input type="text" placeholder="Usuário" name="login" autofocus/>
-	    <i class="fa fa-user"></i>
-	    <input type="password" placeholder="Senha" name="senha" />
-	    <input type="hidden" name="acao" value="Login" />
-	    <i class="fa fa-key"></i>
-	    <a href="#">Esqueci minha senha</a>
-	    <button>
-	      <i class="spinner"></i>
-	      <span class="state">Acessar</span>
-	    </button>
+	    <div class="login-campo">
+	    	<input class="campo" type="text" placeholder="Usuário" name="login" autofocus/>
+	    </div>	    
+	    <div class="senha-campo">
+	    	<input class="campo" type="password" placeholder="Senha" name="senha" />
+	    </div>	    
+	    <input type="hidden" name="acao" value="Login" />	
+	    <div class="link">
+	    	<a href="#">Esqueci minha senha</a>
+	    </div> 
+	    <div class="btn">
+	   		<button class="botao">	      
+	      		<span>Acessar</span>
+	    	</button>
+	    </div>    
 	  </form>	  
 	</div>
 	
