@@ -6,7 +6,7 @@
 }
 
 #cabecalho {
-	background: #59429d;
+	background: rgb(64, 47, 113);
 	font-family: sans-serif;
 	color: #ffffff;
 	padding-top: 1%;
@@ -107,6 +107,7 @@ fieldset .grupo .campo {
 #box {
 	border-style: solid;
 	border-width: 1px;
+	border-radius: 5px;
 	margin-left: 1%;
 	margin-right: 1%;
 	padding-top: 1%;
@@ -117,6 +118,7 @@ fieldset .grupo .campo {
 #box-botoes {
 	border-style: solid;
 	border-width: 1px;
+	border-radius: 5px;
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-top: 1%;

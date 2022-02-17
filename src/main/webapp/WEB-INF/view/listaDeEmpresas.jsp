@@ -11,7 +11,7 @@
 <html>
 <head>
 <style type="text/css">
-  <%@include file="../css/cadastro-empresas.css" %>
+  <%@include file="../css/lista-empresas.css" %>
 </style>
 <meta charset="ISO-8859-1">
 <title>Lista de empresas</title>
@@ -26,45 +26,45 @@
 	</c:if>
 	<c:if test="${not empty empresas}"> -->
 
-	Listas:
+	<h1 id="titulo">Consulta de Empresas</h1>
 	<br />
-
+	
 	<div class="informacoes-empresas">
 		<table id="table-listas">
 			<ul>			
 				<tr>
-					<th>Empresa</th>
-					<th>CNPJ</th>
-					<th>Capital social</th>
-					<th>Contato</th>
-					<th>Data de criação</th>
+					<th class="titulos">Empresa</th>
+					<th class="titulos">CNPJ</th>
+					<th class="titulos">Capital social</th>
+					<th class="titulos">Contato</th>
+					<th class="titulos">Data de criação</th>
 				</tr>
 				<c:forEach items="${empresas}" var="empresa">
 					<tr>
 					
-						<td>					
+						<td class="linha-empresas">					
 							${empresa.nome}						
 						</td>
 						
-						<td>					
+						<td class="linha-empresas">					
 							${empresa.cnpj}					
 						</td>
 						
-						<td>					
+						<td class="linha-empresas">					
 							R$ ${empresa.capital}					
 						</td>
-						<td>					
+						<td class="linha-empresas">					
 							${empresa.email}						
 						</td>
 							
-						<td>
+						<td class="linha-empresas">
 							<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
 						</td>
-						<td>
-							<a href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a>
+						<td class="linha-empresas">
+							<div class="box-editaveis"><a class="editaveis" href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a></div>
 						</td>
-						<td>
-							<a href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a>
+						<td class="linha-empresas">
+							<div class="box-editaveis"><a class="editaveis" href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a></div>
 						</td>						
 						
 					</tr>
@@ -74,12 +74,12 @@
 		</table>
 	</div>
 	
-	<br />
-	
-	<form action="${linkCadastroEmpresas}">
-		<input type="hidden" name="acao" value="NovaEmpresaForm"> 
-		<input type="submit" value="Cadastrar nova empresa">
-	</form>
+	<div class="box-botoes">
+		<form action="${linkCadastroEmpresas}">
+			<input type="hidden" name="acao" value="NovaEmpresaForm"> 
+			<input class="botao" type="submit" value="Adicionar empresa">
+		</form>
+	</div>
 
 
 

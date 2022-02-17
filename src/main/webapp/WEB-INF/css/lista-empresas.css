@@ -1,0 +1,128 @@
+@charset "ISO-8859-1";
+
+*{	
+	margin: 0;
+	padding: 0;	
+}
+
+#cabecalho {
+	background: rgb(64, 47, 113);
+	font-family: sans-serif;
+	color: #ffffff;
+	padding-top: 1%;
+	padding-left: 1%;
+	padding-bottom: 1%;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	
+}
+
+#cabecalho, a {
+	color: #ffffff;
+	text-decoration: none; 
+}
+
+body {
+	background-color: #F0F8FF;
+	font-family: sans-serify;
+	font-size: 1em;
+	color: #59429d;
+	margin-left: 0%;
+	margin-top: 0%;
+		
+}
+
+#titulo {
+	font-family: sans-serif;
+	color: #380861;
+	text-align: left;
+	padding-left: 1%;
+}
+
+#subtitulo {
+	font-family: sans-serif;
+	color: #380861;
+	text-align: left;
+	padding-left: 1%;
+	padding-bottom: 1%;	
+}
+
+/* PARA CIMA: padrão do sistema */ 
+
+#table-listas{
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	padding-top: 1%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: center;
+	width:98%;
+}
+
+th {
+	padding-bottom: 1%;
+	font-family: Arial;
+	font-size: 20px;
+}
+
+td {
+	font-family: Arial;
+	
+}
+
+.linha-empresas {
+	padding-top: 1%;
+}
+
+.editaveis {
+	color: #59429d;
+}
+
+.editaveis:hover {
+	color:white;
+
+}
+
+.box-editaveis:hover {
+	border: 0;
+	border-radius: 50px;
+	width: 100%;
+	background-color: #59429d;
+	color: white;
+}
+
+
+
+.box-botoes {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top: 1%;
+	padding-top: 1%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	text-align: right;	
+}
+
+.botao {
+	font-size: 1.2em;
+	background: #59429d;
+	border: 0;	
+	color: #ffffff;
+	padding: 0.2em 0.1em;
+	box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);	
+	transform: translate(-50%, -50%);
+	margin-top: 0.5%;
+	
+	border-radius: 5px;
+	
+}
+
+.botao:hover {
+	background: #ccbbff;
+	box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+	text-shadow: none;
+}
