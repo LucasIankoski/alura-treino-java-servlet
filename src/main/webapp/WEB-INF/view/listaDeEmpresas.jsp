@@ -61,10 +61,10 @@
 							<fmt:formatDate	value="${empresa.dataAbertura}" pattern="dd/MM/yyyy" />
 						</td>
 						<td class="linha-empresas">
-							<div class="box-editaveis"><a class="editaveis" href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }">Editar</a></div>
+						<a class="editaveis" href="/gerenciador/paginaInicial?acao=MostraEmpresas&id=${empresa.id }"><div class="box-editaveis">Editar</div></a>
 						</td>
 						<td class="linha-empresas">
-							<div class="box-editaveis"><a class="editaveis" href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }">Remover</a></div>
+							<a class="editaveis" href="/gerenciador/paginaInicial?acao=RemoveEmpresa&id=${empresa.id }"><div class="box-editaveis">Remover</div></a>
 						</td>						
 						
 					</tr>

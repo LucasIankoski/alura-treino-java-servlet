@@ -49,13 +49,13 @@
 }
 
 .voltar:hover {
-	background: green;
+	background: #ccbbff;
 	box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
 	text-shadow: none;
 }
 
 .cancelar:hover {
-	background: red;
+	background: #ccbbff;
 	box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
 	text-shadow: none;
 }
@@ -70,4 +70,5 @@
 	padding: 20px;
 	background: white;
 	position: relative;
+	border-radius: 5px;
 }

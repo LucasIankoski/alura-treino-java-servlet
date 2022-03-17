@@ -26,16 +26,16 @@
 			<fieldset class="grupo">		
 				<div class="campo">
 					<label><strong>Nome da empresa</strong></label>	 
-					<input type="text" name="nome" />
+					<input type="text" name="nome" required />
 				</div>
 				
 				<div class="campo">
 					<label><strong>CNPJ</strong></label>				 
-					<input type="text" name="cnpj" />
+					<input id="cnpjMask" type="text" name="cnpj" onkeyup="cnpjMask()" required />
 				</div>	
 				<div class="campo">
 					<label><strong>Email</strong></label>				 	
-					<input type="text" name="email" />
+					<input type="text" name="email" required />
 				</div>					
 			</fieldset>
 			
@@ -43,11 +43,11 @@
 			<fieldset class="grupo">
 				<div class="campo">
 					<label><strong>Capital social</strong></label>				 
-					<input type="text" name="capital"/>
+					<input type="text" name="capital" required/>
 				</div>
 				<div class="campo">
 					<label><strong>Data de abertura</strong></label>						
-					<input type="text" name="data"/>
+					<input type="text" name="data" required/>
 				</div>			
 			</fieldset>
 		</div>
